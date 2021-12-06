@@ -1,0 +1,26 @@
+<div class="header">
+    <div class="">
+        <div class="header-logo">
+            <div *ngIf="currentUser?.roles_name == 'Admin_Hrm'" [routerLink]="['/human-resource-management-layout']"
+                class="home-page" pRipple>
+                <a>
+                    <div class="">
+                        <div class="p-ml-2" style="font-size: 18px;">TMSO Software</div>
+                        <h1>Car Park</h1>
+                    </div>
+                </a>
+            </div>
+            <div *ngIf="currentUser?.roles_name == 'Admin_Carpark'" [routerLink]="['/carpark-operation-admin-layout']"
+                class="home-page" pRipple>
+                <a>
+                    <div class="p-d-flex p-jc-center p-ai-center">
+                        <div class="p-ml-2" style="font-size: 18px;">Car Park</div>
+                    </div>
+                </a>
+            </div>
+            <div class="" style="font-size: 30px; font-weight: 400; margin-top: 20px;">
+                Car Park
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.main-container{
+    width: 700px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.example-full-width {
+    width: 100%;
+}
