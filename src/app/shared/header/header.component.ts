@@ -22,10 +22,11 @@ export class HeaderComponent implements OnInit {
 
   constructor(private authenticationService: AuthenticationService, private router: Router) { 
     this.displayUserMenu = false;
-    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.authenticationService.loggedIn.subscribe((x : any) => this.currentUser = x);
    }
 
   ngOnInit(): void {
+    console.log('29', this.currentUser)
   }
 
 }

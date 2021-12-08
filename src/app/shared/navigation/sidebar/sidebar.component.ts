@@ -19,7 +19,7 @@ export class SidebarComponent implements OnInit {
   constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
-    var userRole = this.authenticationService.currentUserValue?.roles_name
+    var userRole = this.authenticationService.loggedIn.roles_name
     if(userRole === "Admin_Hrm"){
       this.sideBarLinks = menu.get("Admin_Hrm");
     }else if ( userRole === "Admin_Carpark"){

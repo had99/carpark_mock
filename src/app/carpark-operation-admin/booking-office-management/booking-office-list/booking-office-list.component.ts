@@ -1,4 +1,3 @@
-import { Employee } from './../../../human-resource-management/view-employee/view-employee.component';
 import { MatTableDataSource } from '@angular/material/table';
 import { Component, OnInit } from '@angular/core';
 

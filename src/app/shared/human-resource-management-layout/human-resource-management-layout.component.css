@@ -1,0 +1,10 @@
+#content {
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+    min-width: 0;
+    z-index: 0;
+    overflow: auto;
+    scroll-padding-left: 100px;
+}
+  

@@ -22,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HumanResourceManagementLayoutComponent } from './shared/human-resource-management-layout/human-resource-management-layout.component';
 import { CarparkOperationAdminLayoutComponent } from './shared/carpark-operation-admin-layout/carpark-operation-admin-layout.component';
 import { SidebarComponent } from './shared/navigation/sidebar/sidebar.component';
+import { AuthenGuard } from './helpers/authen.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor } from './helpers/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,9 @@ import { SidebarComponent } from './shared/navigation/sidebar/sidebar.component'
     MatListModule,
     MatMenuModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

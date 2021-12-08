@@ -16,13 +16,13 @@ export class LoginComponent implements OnInit {
   returnUrl!: string;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private route: ActivatedRoute, private authenticationService: AuthenticationService) {
-    if (this.authenticationService.currentUserValue) {
-      if (this.authenticationService.currentUserValue.roles_name === 'Admin_Carpark') {
-        this.router.navigate((['/human-resource-management-layout']))
-      } else {
-        this.router.navigate(['/carpark-operation-admin-layout']);
-      }
-    }
+    // if (this.authenticationService.currentUserValue) {
+    //   if (this.authenticationService.currentUserValue.roles_name === 'Admin_Carpark') {
+    //     this.router.navigate((['/human-resource-management-layout']))
+    //   } else {
+    //     this.router.navigate(['/carpark-operation-admin-layout']);
+    //   }
+    // }
   }
 
   ngOnInit(): void {
@@ -47,16 +47,17 @@ export class LoginComponent implements OnInit {
       console.log('bbbbbbbbbbbbbb');
       if (this.returnUrl) {
         this.router.navigate([this.returnUrl]);
-      } else {
-        if (data.roles_name === 'Admin_Hrm') {
-          this.router.navigate((['/human-resource-management-layout']))
-        } else {
-          this.router.navigate(['/carpark-operation-admin-layout']);
-        }
-      }
-      console.log(this.f['username'].value, this.f['password'].value);
-      }, (error: any) => {
-        this.error = error;
+      } 
+      // else {
+      //   if (data.roles_name === 'Admin_Hrm') {
+      //     this.router.navigate((['/human-resource-management-layout']))
+      //   } else {
+      //     this.router.navigate(['/carpark-operation-admin-layout']);
+      //   }
+      // }
+      // console.log(this.f['username'].value, this.f['password'].value);
+      // }, (error: any) => {
+      //   this.error = error;
     });
     // this.authenticationService.login(this.f['username'].value, this.f['password'].value).pipe(first()).subscribe((data: any) => {
     //   console.log('bbbbbbbbbbbbbb');
