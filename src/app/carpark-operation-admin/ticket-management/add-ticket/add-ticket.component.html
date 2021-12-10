@@ -1,1 +1,54 @@
-<p>add-ticket works!</p>
+<div class="main-container">
+    <div class="header-title">
+        <h1>Add Ticket</h1>
+    </div>
+    <hr />
+    <div class="add-form">
+        <form [formGroup]="addTicketInformation" (ngSubmit)="addNewTicket()">
+            <div class="row">
+                <label class="col-25" style="font-weight: 600;">Customer <strong class="note">(*)</strong></label>
+                <mat-form-field class="col-75" appearance="outline" style="width: 250px;">
+                    <input matInput type="text" formControlName="customer" name="customer"
+                        placeholder="Enter customer name" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <label class="col-25" style="font-weight: 600;">Booking time <strong class="note">(*)</strong></label>
+                <mat-form-field class="col-75" appearance="outline" style="width: 250px;">
+                    <input matInput type="text" formControlName="bookingTime" name="bookingTime"
+                        placeholder="Enter booking time" />
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <label class="col-25" style="font-weight: 600;">Trip <strong class="note">(*)</strong></label>
+                <mat-form-field class="col-75" appearance="outline" style="width: 250px;">
+                                    <mat-select placeholder="Select trip">
+                        <mat-option value="one">Trà Vinh - Khánh Hòa</mat-option>
+                        <mat-option value="two">Đồng Tháp - Vũng Tàu</mat-option>
+                        <mat-option value="two">Huế - Đà Nẵng</mat-option>
+                        <mat-option value="two">Hà Nội - Hải Phòng</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <label class="col-25" style="font-weight: 600;">License plate <strong class="note">(*)</strong></label>
+                <mat-form-field class="col-75" appearance="outline" style="width: 250px;">
+                                    <mat-select placeholder="Select license plate">
+                        <mat-option value="one">43C1-98877</mat-option>
+                        <mat-option value="two">51B2-12345</mat-option>
+                        <mat-option value="two">29B1-66877</mat-option>
+                        <mat-option value="two">15C1-01234</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="button-action">
+                <button mat-raised-button style="background-color: #d68a18; margin-left: 15px;" color="primary">
+                    <mat-icon style="font-size: 20px;">replay</mat-icon> Reset
+                </button>
+                <button mat-raised-button style="background-color: #14b938; margin-left: 15px;" color="primary">
+                    <mat-icon style="font-size: 20px;">add</mat-icon> Add
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

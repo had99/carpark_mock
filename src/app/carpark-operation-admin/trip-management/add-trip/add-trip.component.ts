@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-trip',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddTripComponent implements OnInit {
 
-  constructor() { }
+  addTripInformation!: FormGroup;
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.addTripInformation = this.formBuilder.group({
+      destination: [],
+      departureTime: [],
+      driver: [],
+      carType:[],
+      maximumOnlineTicketNumber:[],
+      departureDate: [],
+    })
   }
 
+  addNewTrip(){
+    console.log(this.addTripInformation.value);
+    
+  }
 }

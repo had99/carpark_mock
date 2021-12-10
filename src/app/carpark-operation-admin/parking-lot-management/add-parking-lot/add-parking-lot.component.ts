@@ -1,3 +1,4 @@
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddParkingLotComponent implements OnInit {
 
-  constructor() { }
+  addParkingLotInformation!: FormGroup
+  constructor(private formBuider: FormBuilder) { }
 
   ngOnInit(): void {
+    this.addParkingLotInformation = this.formBuider.group({
+      parkingName: [],
+      place:[],
+      area: [],
+      price:[],
+    })
+  }
+
+  addNewParkingLot(){
+    console.log(this.addParkingLotInformation.value);
   }
 
 }
