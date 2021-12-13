@@ -23,9 +23,9 @@ export class AuthenticationService {
     return this.httpClient.post<any>(`${environment.apiUrl}/api/login`, body, { 'headers': headers })
       .pipe(tap(res => {
         const roles = res.roles_name
-        // if (roles.length > 1) {
-        //   this.router.navigate(['/roles']);
-        // }
+        if (roles.length > 1) {
+          this.router.navigate(['/roles']);
+        }
          if (roles[0] === 'Admin_Hrm') {
           this.router.navigate(['/human-resource-management-layout']);
         } else if (roles[0] === 'Admin_Carpark') {
@@ -40,7 +40,9 @@ export class AuthenticationService {
         // else {
         //   this.router.navigate(['/auth/login']);
         // }
-        localStorage.setItem('currentUser', res.token);
+        let user = JSON.stringify(res);
+        localStorage.setItem('currentUser', user);
+        return user;
       }));
   }
 

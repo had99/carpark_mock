@@ -1,6 +1,6 @@
 .header {
     height: 60px;
-    background-color: #f8f9fa;
+    background-color: #8b919e;
     box-shadow: 0 2px 8px rgb(38 50 56 / 20%);
     position:absolute;
     width: 100%;
@@ -21,10 +21,10 @@
     font-weight: bold;
 }
 
-.home-page:hover {
+/* .home-page:hover {
     background-color: #deebffe6;
     box-shadow: 0 0 0 2px transparent;
-}
+} */
 
 .user-info {
     position: relative;

@@ -6,7 +6,7 @@ export class SlideBarLink {
 let menu = new Map<string, SlideBarLink[]>();
 
 const adminHRMMenu = [
-    new SlideBarLink('Dashboard', '',''),
+    // new SlideBarLink('Dashboard', '',''),
     new SlideBarLink('Employee list', 'view-employee',''),
     new SlideBarLink('Add Employee','add-new-employee','')
 ];

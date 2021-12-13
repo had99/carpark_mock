@@ -1,19 +1,19 @@
 <div class="header">
     <div class="">
         <div class="header-logo">
-            <div *ngIf="currentUser?.roles_name == 'Admin_Hrm'" [routerLink]="['/human-resource-management-layout']"
+            <div *ngIf="hrm == true" [routerLink]="['/human-resource-management-layout']"
                 class="home-page" pRipple>
                 <a>
                     <div class="p-d-flex p-jc-center p-ai-center">
-                        <div class="p-ml-2" style="font-size: 18px;">HRM</div>
+                        <div class="p-ml-2" style="font-size: 30px; margin-top: 20px; margin-left: 15px;">HRM</div>
                     </div>
                 </a>
             </div>
-            <div *ngIf="currentUser?.roles_name == 'Admin_Carpark'" [routerLink]="['/carpark-operation-admin-layout']"
+            <div *ngIf="carpark == true" [routerLink]="['/carpark-operation-admin-layout']"
                 class="home-page" pRipple>
                 <a>
                     <div class="p-d-flex p-jc-center p-ai-center">
-                        <div class="p-ml-2" style="font-size: 18px;">Car Park</div>
+                        <div class="p-ml-2" style="font-size: 30px; margin-top: 20px; margin-left: 15px;">Car Park</div>
                     </div>
                 </a>
             </div>

@@ -1,15 +1,13 @@
-<div [style.width.px]="sidebarWidth"
-     class="sidebar">
+<div class="sidebar">
     <div class="sidebar-content">
-        <!-- <div class="p-d-flex p-jc-center system-name"></div> -->
-
+        <div class="p-d-flex p-jc-center system-name" style="margin-top: 35px;">Side Bar</div>
         <div *ngFor="let link of sideBarLinks">
             <a *ngIf="link.url"
                [routerLink]="link.url"
                routerLinkActive="active"
-               class="link allowed" pRipple>
-               <i class="pi {{link.icon}}"></i>
-                <div style="margin-left: 10px;">{{ link.name }}</div>
+               class="link allowed">
+               <!-- <i class="pi {{link.icon}}"></i> -->
+                <div style="margin-left: 15px; ">{{link.name}}</div>
             </a>
         </div>
     </div>
