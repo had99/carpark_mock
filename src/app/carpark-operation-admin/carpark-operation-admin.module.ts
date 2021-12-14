@@ -1,8 +1,10 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthenGuard } from '../helpers/authen.guard';
 
 const routes: Routes = [
+  { path:'', redirectTo:'booking-office-management/booking-office-list', pathMatch:'full'},
   {
     path: 'booking-office-management',
     loadChildren: () => import('./booking-office-management/booking-office-management.module').then((m) => m.BookingOfficeManagementModule)

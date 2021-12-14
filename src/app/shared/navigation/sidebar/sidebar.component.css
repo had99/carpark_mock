@@ -12,12 +12,8 @@
     top: 0px;
     width: 100%;
     padding: 2rem 1rem;
-    background-color: #949aa7;
+    background-color: #c7cbd3;
     background-size: cover;
-}
-
-.logo {
-    padding-right: 10px;
 }
 
 .system-name {
@@ -39,19 +35,11 @@
 }
 
 .active {
-    color: #3ABCA7;
+    color: #be2e3a;
     background-color:rgba(252, 252, 252, 0.13);
 }
 
 .allowed:hover {
-    color: #3ABCA7;
+    color: #be2e3a;
     background-color:rgba(252, 252, 252, 0.13);
-}
-
-.project-info {
-    overflow-x: hidden;
-}
-
-.project-name, .project-kind {
-    width: 180px;
 }

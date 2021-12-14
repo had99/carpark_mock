@@ -1,22 +1,11 @@
+
 <div class="header">
-    <div class="">
-        <div class="header-logo">
-            <div *ngIf="hrm == true" [routerLink]="['/human-resource-management-layout']"
-                class="home-page" pRipple>
-                <a>
-                    <div class="p-d-flex p-jc-center p-ai-center">
-                        <div class="p-ml-2" style="font-size: 30px; margin-top: 20px; margin-left: 15px;">HRM</div>
-                    </div>
-                </a>
-            </div>
-            <div *ngIf="carpark == true" [routerLink]="['/carpark-operation-admin-layout']"
-                class="home-page" pRipple>
-                <a>
-                    <div class="p-d-flex p-jc-center p-ai-center">
-                        <div class="p-ml-2" style="font-size: 30px; margin-top: 20px; margin-left: 15px;">Car Park</div>
-                    </div>
-                </a>
-            </div>
+    <div class="div-header">
+        <div class="welcome-user">
+            <h2>Welcome {{currentUser.username}}</h2>
+        </div>
+        <div class="logout" (click)="logOut()" style="align-items: center;">
+            <span><mat-icon style="font-size: 14px;">exit_to_app</mat-icon>Logout</span>
         </div>
     </div>
 </div>

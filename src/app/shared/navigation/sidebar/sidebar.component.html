@@ -1,12 +1,13 @@
 <div class="sidebar">
     <div class="sidebar-content">
-        <div class="p-d-flex p-jc-center system-name" style="margin-top: 35px;">Side Bar</div>
+        <div *ngIf="roleUser === 'human'" class="p-d-flex p-jc-center system-name" style="margin-top: 35px; padding-left: 35px;">Human Resource Management</div>
+        <div *ngIf="roleUser === 'carpa'" class="p-d-flex p-jc-center system-name" style="margin-top: 35px; padding-left: 35px;">Car Park Operation</div>
         <div *ngFor="let link of sideBarLinks">
             <a *ngIf="link.url"
                [routerLink]="link.url"
                routerLinkActive="active"
                class="link allowed">
-               <!-- <i class="pi {{link.icon}}"></i> -->
+               <mat-icon style="font-size: 20px;">{{link.icon}}</mat-icon>
                 <div style="margin-left: 15px; ">{{link.name}}</div>
             </a>
         </div>
